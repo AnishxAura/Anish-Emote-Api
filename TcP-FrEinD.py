@@ -28,14 +28,14 @@ Chat_Leave = False
 #------------------------------------------#
 
 Hr = {
-    'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 11; ASUS_Z01QD Build/PI)",
+    'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 12; ASUS_Z01QD Build/SQ3A.220705.004)", # Android Version बढ़ाया
     'Connection': "Keep-Alive",
     'Accept-Encoding': "gzip",
     'Content-Type': "application/x-www-form-urlencoded",
     'Expect': "100-continue",
     'X-Unity-Version': "2018.4.11f1",
     'X-GA': "v1 1",
-    'ReleaseVersion': "OB50"}
+    'ReleaseVersion': "OB52"}
 
 # ---- Random Colores ----
 def get_random_color():

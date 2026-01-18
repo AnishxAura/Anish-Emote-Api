@@ -136,7 +136,7 @@ async def xBunnEr():
     return random.choice(bN)
 
 async def xSEndMsg(Msg , Tp , Tp2 , id , K , V):
-    feilds = {1: id , 2: Tp2 , 3: Tp, 4: Msg, 5: 1735129800, 7: 2, 9: {1: "xBesTo - C4", 2: int(await xBunnEr()), 3: 901048018, 4: 330, 5: 909034009, 8: "xBesTo - C4", 10: 1, 11: 1, 13: {1: 2}, 14: {1: 12484827014, 2: 8, 3: "\u0010\u0015\b\n\u000b\u0013\f\u000f\u0011\u0004\u0007\u0002\u0003\r\u000e\u0012\u0001\u0005\u0006"}, 12: 0}, 10: "en", 13: {3: 1}}
+    feilds = {1: id , 2: Tp2 , 3: Tp, 4: Msg, 5: 1767225600, 7: 2, 9: {1: "xBesTo - C4", 2: int(await xBunnEr()), 3: 901048018, 4: 330, 5: 909034009, 8: "xBesTo - C4", 10: 1, 11: 1, 13: {1: 2}, 14: {1: 12484827014, 2: 8, 3: "\u0010\u0015\b\n\u000b\u0013\f\u000f\u0011\u0004\u0007\u0002\u0003\r\u000e\u0012\u0001\u0005\u0006"}, 12: 0}, 10: "en", 13: {3: 1}}
     Pk = (await CrEaTe_ProTo(feilds)).hex()
     Pk = "080112" + await EnC_Uid(len(Pk) // 2, Tp='Uid') + Pk
     return await GeneRaTePk(Pk, '1201', K, V)
@@ -189,7 +189,7 @@ async def GenJoinSquadsPacket(code,  K , V):
     fields[2][9] = {}
     fields[2][9][2] = 800
     fields[2][9][6] = 11
-    fields[2][9][8] = "1.111.1"
+    fields[2][9][8] = "1.120.7" # OLD: "1.111.1" -> NEW: "1.120.7"
     fields[2][9][9] = 5
     fields[2][9][10] = 1
     return await GeneRaTePk((await CrEaTe_ProTo(fields)).hex() , '0515' , K , V)   
@@ -328,7 +328,7 @@ async def GeneRaTePk(Pk , N , K , V):
     else: print('ErroR => GeneRatinG ThE PacKeT !! ')
     return bytes.fromhex(HeadEr + _ + PkEnc)
 async def OpEnSq(K , V,region):
-    fields = {1: 1, 2: {2: "\u0001", 3: 1, 4: 1, 5: "en", 9: 1, 11: 1, 13: 1, 14: {2: 5756, 6: 11, 8: "1.111.5", 9: 2, 10: 4}}}
+    fields = {1: 1, 2: {2: "\u0001", 3: 1, 4: 1, 5: "en", 9: 1, 11: 1, 13: 1, 14: {2: 5756, 6: 11, 8: "1.120.7", 9: 2, 10: 4}}}
     if region.lower() == "ind":
         packet = '0514'
     elif region.lower() == "bd":

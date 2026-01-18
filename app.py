@@ -31,7 +31,7 @@ Chat_Leave = False
 app = Flask(__name__)
 
 Hr = {
-    'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 11; ASUS_Z01QD Build/PI)",
+    'User-Agent': "Dalvik/2.1.0 (Linux; U; Android 12; ASUS_Z01QD Build/SQ3A.220705.004)", # Android Version बढ़ाया
     'Connection': "Keep-Alive",
     'Accept-Encoding': "gzip",
     'Content-Type': "application/x-www-form-urlencoded",
@@ -91,20 +91,20 @@ async def EncRypTMajoRLoGin(open_id, access_token):
     major_login.event_time = str(datetime.now())[:-7]
     major_login.game_name = "free fire"
     major_login.platform_id = 1
-    major_login.client_version = "1.118.1"
-    major_login.system_software = "Android OS 9 / API-28 (PQ3B.190801.10101846/G9650ZHU2ARC6)"
+    major_login.client_version = "1.120.7"  # OB52 का संभावित वर्ज़न
+    major_login.system_software = "Android OS 12 / API-31 (SQ3A.220705.004/G9650ZHU2ARC6)"
     major_login.system_hardware = "Handheld"
-    major_login.telecom_operator = "Verizon"
+    major_login.telecom_operator = "Jio 5G" # Optional change
     major_login.network_type = "WIFI"
     major_login.screen_width = 1920
     major_login.screen_height = 1080
-    major_login.screen_dpi = "280"
-    major_login.processor_details = "ARM64 FP ASIMD AES VMH | 2865 | 4"
-    major_login.memory = 3003
+    major_login.screen_dpi = "480"
+    major_login.processor_details = "ARM64 FP ASIMD AES VMH | 2865 | 8"
+    major_login.memory = 6000
     major_login.gpu_renderer = "Adreno (TM) 640"
-    major_login.gpu_version = "OpenGL ES 3.1 v1.46"
+    major_login.gpu_version = "OpenGL ES 3.2 v1.46" # Updated OpenGL
     major_login.unique_device_id = "Google|34a7dcdf-a7d5-4cb6-8d7e-3b0e448a0c57"
-    major_login.client_ip = "223.191.51.89"
+    major_login.client_ip = "127.0.0.1" # Use actual IP or keep dummy
     major_login.language = "en"
     major_login.open_id = open_id
     major_login.open_id_type = "4"
@@ -114,9 +114,9 @@ async def EncRypTMajoRLoGin(open_id, access_token):
     memory_available.hidden_value = 81
     major_login.access_token = access_token
     major_login.platform_sdk_id = 1
-    major_login.network_operator_a = "Verizon"
+    major_login.network_operator_a = "Jio 5G"
     major_login.network_type_a = "WIFI"
-    major_login.client_using_version = "7428b253defc164018c604a1ebbfebdf"
+    major_login.client_using_version = "7428b253defc164018c604a1ebbfebdf" # यह Hash अक्सर बदलता है, लेकिन पुराना भी कई बार काम कर जाता है
     major_login.external_storage_total = 36235
     major_login.external_storage_available = 31335
     major_login.internal_storage_total = 2519
@@ -132,8 +132,8 @@ async def EncRypTMajoRLoGin(open_id, access_token):
     major_login.channel_type = 3
     major_login.cpu_type = 2
     major_login.cpu_architecture = "64"
-    major_login.client_version_code = "2019118695"
-    major_login.graphics_api = "OpenGLES2"
+    major_login.client_version_code = "2019118699" # थोड़ा सा बढ़ा दें
+    major_login.graphics_api = "OpenGLES3"
     major_login.supported_astc_bitset = 16383
     major_login.login_open_id_type = 4
     major_login.analytics_detail = b"FwQVTgUPX1UaUllDDwcWCRBpWAUOUgsvA1snWlBaO1kFYg=="
@@ -142,7 +142,7 @@ async def EncRypTMajoRLoGin(open_id, access_token):
     major_login.extra_info = "KqsHTymw5/5GB23YGniUYN2/q47GATrq7eFeRatf0NkwLKEMQ0PK5BKEk72dPflAxUlEBir6Vtey83XqF593qsl8hwY="
     major_login.android_engine_init_flag = 110009
     major_login.if_push = 1
-    major_login.is_vpn = 1
+    major_login.is_vpn = 0 # VPN flag 0 करना बेहतर है
     major_login.origin_platform_type = "4"
     major_login.primary_platform_type = "4"
     string = major_login.SerializeToString()
@@ -595,7 +595,7 @@ async def MaiiiinE():
     # BOT LOGIN UID
     BOT_UID = int('14092934980')  # <-- FIXED BOT UID
 
-    Uid, Pw = '4336072956', '703E4760EF0F989228697A4A99F3610ED94626880ADFB7E4C64860029AAEEA3F'
+    Uid, Pw = '4262609510', 'C5330E72446B4CF328131E15FCAFDAFCDB9DB9E0455284969B03413D959B5D51'
 
     open_id, access_token = await GeNeRaTeAccEss(Uid, Pw)
     if not open_id or not access_token:
